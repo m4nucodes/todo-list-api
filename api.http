@@ -1,0 +1,15 @@
+### Get tasks
+GET http://localhost:8080/tasks
+
+### Post tasks
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+	"name": "Finish the Quarkus api",
+	"status": "Done",
+	"description": "Learning Quarkus at x2 speed"
+}
+
+### Get a specific task
+GET http://localhost:8080/tasks/9b3e3b93-ea53-4b02-a8df-d61823ed73ae
