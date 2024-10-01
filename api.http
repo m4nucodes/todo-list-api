@@ -1,8 +1,9 @@
 ### Get tasks
-GET http://localhost:8080/tasks
+GET http://localhost:8080/api/v1/tasks
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbTRudS5kZXYvaXNzdWVyIiwiZ3JvdXBzIjpbInVzZXIiXSwiaWQiOiIwNmI3ZTMzYi1mYmQ5LTRhZmItYmNmMC02NjI5NzljYzkzOGIiLCJ1c2VybmFtZSI6Im00bnUiLCJpYXQiOjE3Mjc2NjkyNjMsImV4cCI6MTcyNzY2OTU2MywianRpIjoiZjBjZmYxNGYtZjA4ZS00YmQ3LWEwMDktYzY2YmU0YjM3ZjNkIn0.Jh05rgsZdqUQ6Bpm_XxfyjZ1c1674LeyB2NZgUtA7cyDHWZb3M-6UpcfmM16Q2JrTmzUzwir9SeH2NA3XMsgPWzkhFRFusChrkuou2GNAXLYiaDiH8h1Vj8o7dQLB-btXJcHTyRlrn-GVziB_2iPdEJIGIs7F3WUDzJnmlUsH5tblQqEgfLGI-Oka66TCullQX5PLq5X2ilPw84Fix58W75vO2uf8P7tK5Er8IutYbj7MqKO7LnFJhtvjs_akuNV4uu4tFfHjVy5hXds_p6OJ4zXS548ClVdH_GwTRILb0Yb5z1cfrSXOtOzRZyOA4PXMjmsOCtAcRNWEqudOXmZeQ
 
 ### Post tasks
-POST http://localhost:8080/tasks
+POST http://localhost:8080/api/v1/tasks
 Content-Type: application/json
 
 {
@@ -12,4 +13,27 @@ Content-Type: application/json
 }
 
 ### Get a specific task
-GET http://localhost:8080/tasks/9b3e3b93-ea53-4b02-a8df-d61823ed73ae
+GET http://localhost:8080/api/v1/tasks/9b3e3b93-ea53-4b02-a8df-d61823ed73ae
+
+### Login
+POST http://localhost:8080/api/v1/user/login
+Content-Type: application/json
+
+{
+	"username": "m4nu",
+	"password": "1234"
+}
+
+### Register
+POST http://localhost:8080/api/v1/user/register
+Content-Type: application/json
+
+{
+	"username": "m4nu",
+	"password": "1234",
+	"name": "Emmanuel Espinal"
+}
+
+### Test
+GET http://localhost:8080/api/v1/tasks/permit-all
+Authorization: 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbTRudS5kZXYvaXNzdWVyIiwiZ3JvdXBzIjpbInVzZXIiXSwiaWQiOiIyYmZhYWM1Yy1iYmUyLTQ2NjMtYWY3Yy0wZWYzNzhmNjZkMjUiLCJ1c2VybmFtZSI6Im00bnUiLCJpYXQiOjE3Mjc3NTAwNzksImV4cCI6MTcyNzc1MDM3OSwianRpIjoiM2ZlOGE2ODYtM2UyNS00NWQwLTk2ZDgtNmI1NGExNDk2MGQ5In0.NGXXBL8aAp_b4-hpe3QrxWztLRC9p4TWLgEn3pE7otpIK-zb9XanLWOGcpVrDrVEzB8kq9j52I53Xi9l4pys7gM9urATznGRpNZqg2lisS3XeC16d-4V1DGDqu362FpPmp5NLwVijiIKzaOUxcbVTye4MegWfucA9PVfaamLU1tDJVeyjsATOTDmRxDhtqu2MsAJOyYlin34pLefbG2zPAZQTywJHVvwojjhoylZy9OJwduM4ilw0ROK_VVR9xo0GxjiXD04aHS7ra9LKgohdXu9QuOHyzPF50k6t1QdD4fD711zCAWhm6A7iPTFiY4Te5xTyZolpmCiet2QcOybZQ'
